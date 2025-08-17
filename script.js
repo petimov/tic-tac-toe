@@ -5,6 +5,7 @@ for (let i = 0; i < 9; i++) {
 }
 
 let counter = 0;
+let xWon = false;
 
 const places = document.querySelectorAll('.places')
 
@@ -20,6 +21,16 @@ places.forEach(place => {
             place.innerHTML = 'o'
         } else {
             place.innerHTML = 'x'
+        }
+
+        places.forEach(place => {
+            if ([...board.children].slice(0, 3).every(cell => cell.innerText === 'x')) {
+                xWon = true;
+            }
+        })
+
+        if (xWon) {
+            alert('x won')
         }
     })
 
