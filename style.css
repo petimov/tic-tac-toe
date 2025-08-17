@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.places {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.clicked {
+    background-color: red;
+}
